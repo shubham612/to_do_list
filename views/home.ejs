@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="sheet">
+         <h1 style="margin-bottom: 2vh; color: rgba(44, 37, 37, 0.87);"><i class="fas fa-clipboard-list"></i> My TO-DO List</h1>
+        <!-- Input Form-->
+         <form action="/create_task"  method="POST">
+            <div class="desc-container">
+            <label for="description">DESCRIPTION</label><br>
+            <input type="text" name="task" placeholder="What do you need to do?" id="description">
+            </div>
+            <div class="select-container" style="border-left: none;">
+            <label for="category">CATEGORY</label><br>
+            <select name="task_type" required id="category">
+                 <option value="Work">Work</option>
+                 <option value="Personal">Personal</option>
+                 <option value="School">School</option>
+                 <option value="Others">Others</option>
+            </select>
+            </div>
+            <div class="select-container" style="border-left: none; border-right:none;">
+             <label for="dueDate">DUE DATE</label><br>
+            <input type="date" name="dueDate" placeholder="dd/mm/yyyy" id="dueDate">
+            </div>
+            <button type="submit" id="add"><i class="fas fa-plus"></i> &nbsp;ADD TASK</button>
+        </form>
+       <!--*************************************************-->
+       <!--Task Stored in form as check-box input-->
+        <form action="/select_delete" method="POST">
+            <button type="submit" id="add" style="background-color: rgb(211, 49, 49);"><i class="far fa-trash-alt"></i> &nbsp;DELETE</button><br>
+            <ul>
+            <% for(let i of toDo_list) { %>
+                <li>
+                <div class="container">
+                        <input type="checkbox" name="arr[]" value=<%= i._id%>><br>
+                        <span class="task">
+                            <h3><%=i.task%></h3>
+                            <h5 style="color:grey;"><i class="far fa-calendar-alt"></i> <%=i.dueDate%></h5>
+                        </span>
+                        <div class="task-type"><span><%=i.task_type%></span></div>
+                </div>
+                </li>      
+             <% } %>
+            </ul>
+        </form>
+        <!--************************************************************-->
+        </div>
+    </body>
+</html>

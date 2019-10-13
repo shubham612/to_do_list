@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    background-color: gray;
+    text-align: center;
+    position: relative;
+    font-family: monospace;
+}
+
+/* Styling the sheet */
+.sheet{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 25%;
+    top: 6vh;
+    background-color: white;
+    padding-bottom: 4vh;
+
+}
+
+/* Styling the form */
+form{
+    width: 100%;
+    height: auto;
+    padding: 0vh 0vh 0vh 0vh;
+    text-align: initial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+label{
+    font-size: 14px;
+}
+
+form input {
+    width: 100%;
+    height: 5vh;
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+    /* font-family: cursive; */
+    border: none;
+    background-color: transparent;
+}
+
+form  input:focus{
+    outline: none;
+}
+
+form select{
+    width: 100%;
+    height: 5vh;
+    margin: 0;
+    padding: 5px;
+    border: none;
+    font-size: 17px;
+    /* font-family: cursive; */
+    background-color: transparent;
+}
+
+form  select:focus{
+    outline: none;
+}
+
+
+form label{
+    padding-left: 7px;
+
+}
+
+
+.desc-container{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box;
+
+}
+
+.select-container{
+    width: 50%;
+    height: auto;
+    margin: 0;
+    border: 1px solid lightgray;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+#add{
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    padding: 4px;
+    border: none;
+    background-color: darkslategrey;
+    color: white;
+    margin-top: 3vh;
+
+}
+
+/* T0-DO-TASKS Container styling */
+.container{
+    width: 100%;
+    border-top: 1px solid gray;
+    float: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* CheckBox-Styling */
+.container input{
+    float: left;
+    width: 22%;
+    height: 3.5vh;
+    margin: 0;
+    padding: 3px;
+    font-size: 1vh;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+.task{
+    width: 65%;
+    color: rgb(34, 32, 32);
+    font-size: 18px;
+    text-align: left;
+    text-transform: uppercase;
+
+}
+
+.task-type{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(15, 43, 53);
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 40px;
+    margin-right: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.task-type span{
+
+    position: relative;
+    top: 8%;
+}
+
+
+body ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    display: block;
+    width: 100%;
+}
+
+
+
+
